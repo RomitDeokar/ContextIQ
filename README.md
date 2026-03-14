@@ -32,7 +32,7 @@ Built for **Hack & Forge 2026** — Data Science Summit, BIT Mesra.
 
 ## Live Demo
 
-🔗 [contextiq.vercel.app](https://context-iq-eta.vercel.app/) *(replace with your deployed URL)*
+🔗 [contextiq.vercel.app](https://context-iq-eta.vercel.app/) 
 
 ---
 

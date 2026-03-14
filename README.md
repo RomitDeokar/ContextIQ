@@ -1,4 +1,4 @@
-# ContextIQ 2.0
+# ContextIQ 
 
 > **An enterprise semantic firewall that verifies meaning before intelligence.**
 

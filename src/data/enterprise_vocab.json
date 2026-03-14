@@ -1,0 +1,100 @@
+{
+  "apple": [
+    { "dept": "F&B", "meaning": "Premium dessert category" },
+    { "dept": "Manufacturing", "meaning": "Product code A-PL-001" },
+    { "dept": "IT", "meaning": "Apple Inc. hardware asset" },
+    { "dept": "Finance", "meaning": "Project Apple — Q3 audit initiative" }
+  ],
+  "line": [
+    { "dept": "Manufacturing", "meaning": "Production assembly line" },
+    { "dept": "IT", "meaning": "Network communication line" },
+    { "dept": "F&B", "meaning": "Service counter queue" }
+  ],
+  "book": [
+    { "dept": "IT Helpdesk", "meaning": "Log a support ticket" },
+    { "dept": "Finance", "meaning": "Record in accounting ledger" },
+    { "dept": "HR", "meaning": "Schedule a meeting room" }
+  ],
+  "falcon": [
+    { "dept": "Manufacturing", "meaning": "Codename for primary logistics vendor" }
+  ],
+  "pipeline": [
+    { "dept": "IT", "meaning": "CI/CD deployment pipeline" },
+    { "dept": "Finance", "meaning": "Sales opportunity pipeline" },
+    { "dept": "Manufacturing", "meaning": "Physical fluid pipeline" }
+  ],
+  "ticket": [
+    { "dept": "IT Helpdesk", "meaning": "Support request entry" },
+    { "dept": "Finance", "meaning": "Invoice or payment voucher" },
+    { "dept": "HR", "meaning": "Event attendance pass" }
+  ],
+  "plant": [
+    { "dept": "Manufacturing", "meaning": "Production facility" },
+    { "dept": "F&B", "meaning": "Plant-based ingredient category" }
+  ],
+  "release": [
+    { "dept": "IT", "meaning": "Software version deployment" },
+    { "dept": "HR", "meaning": "Employee clearance/exit" },
+    { "dept": "Manufacturing", "meaning": "Batch dispatch approval" }
+  ],
+  "master": [
+    { "dept": "IT", "meaning": "Primary database or git branch" },
+    { "dept": "Finance", "meaning": "Master budget document" },
+    { "dept": "Manufacturing", "meaning": "Master production schedule" }
+  ],
+  "delta": [
+    { "dept": "Finance", "meaning": "Variance between actual and forecast" },
+    { "dept": "IT", "meaning": "Code diff or data change set" },
+    { "dept": "Manufacturing", "meaning": "Tolerance deviation in QC" }
+  ],
+  "bank": [
+    { "dept": "Finance", "meaning": "Financial institution account" },
+    { "dept": "Manufacturing", "meaning": "Component storage bank" },
+    { "dept": "IT", "meaning": "Data bank or storage pool" }
+  ],
+  "raise": [
+    { "dept": "HR", "meaning": "Salary increment request" },
+    { "dept": "IT Helpdesk", "meaning": "Raise a support ticket" },
+    { "dept": "Finance", "meaning": "Raise an invoice" }
+  ],
+  "branch": [
+    { "dept": "IT", "meaning": "Git code branch" },
+    { "dept": "Finance", "meaning": "Regional office branch" },
+    { "dept": "HR", "meaning": "Organisational branch/division" }
+  ],
+  "dump": [
+    { "dept": "IT", "meaning": "Database or memory dump" },
+    { "dept": "Manufacturing", "meaning": "Waste material disposal" },
+    { "dept": "Finance", "meaning": "Data export for audit" }
+  ],
+  "flag": [
+    { "dept": "IT", "meaning": "Feature flag or error flag" },
+    { "dept": "Finance", "meaning": "Flag a suspicious transaction" },
+    { "dept": "HR", "meaning": "Flag an employee concern" }
+  ],
+  "cycle": [
+    { "dept": "Manufacturing", "meaning": "Production cycle time" },
+    { "dept": "Finance", "meaning": "Billing or payment cycle" },
+    { "dept": "HR", "meaning": "Performance review cycle" }
+  ],
+  "load": [
+    { "dept": "IT", "meaning": "Server load or data load job" },
+    { "dept": "Manufacturing", "meaning": "Machine load capacity" },
+    { "dept": "F&B", "meaning": "Load of incoming inventory" }
+  ],
+  "tag": [
+    { "dept": "IT", "meaning": "Code tag or release tag" },
+    { "dept": "Finance", "meaning": "Cost centre tag" },
+    { "dept": "Manufacturing", "meaning": "Physical asset tag" }
+  ],
+  "freeze": [
+    { "dept": "Finance", "meaning": "Budget freeze or account freeze" },
+    { "dept": "IT", "meaning": "Code freeze before release" },
+    { "dept": "F&B", "meaning": "Cold storage freeze process" }
+  ],
+  "close": [
+    { "dept": "Finance", "meaning": "Month-end or year-end close" },
+    { "dept": "IT Helpdesk", "meaning": "Close a support ticket" },
+    { "dept": "HR", "meaning": "Close a job requisition" }
+  ]
+}

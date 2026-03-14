@@ -344,8 +344,8 @@ For a 24-hour hackathon prototype, localStorage provides real persistence across
 ---
 
 ## Team
-Arshdeep Singh - leader
-Romit Deokar
+Arshdeep Singh - Leader<br>
+Romit Deokar<br>
 Ketan
 
 ---

@@ -344,12 +344,9 @@ For a 24-hour hackathon prototype, localStorage provides real persistence across
 ---
 
 ## Team
-
-Built at **Hack & Forge 2026** — Data Science Summit, BIT Mesra
-24-hour hackathon · Problem Statement 1
+Arshdeep Singh - leader
+Romit Deokar
+Ketan
 
 ---
 
-## License
-
-MIT

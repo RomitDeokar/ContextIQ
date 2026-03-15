@@ -22,7 +22,7 @@ export function buildSystemPrompt(department, resolvedTerms = []) {
   return base
 }
 
-export function buildQueryPrompt(query, scoreResult, department) {
+export function buildQueryPrompt(query, scoreResult, _department) {
   let prompt = query
 
   if (scoreResult.hasModeratAmbiguity) {

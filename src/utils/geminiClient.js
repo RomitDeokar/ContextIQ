@@ -1,7 +1,7 @@
 const GEMINI_API_KEY = import.meta.env.VITE_GEMINI_API_KEY || ''
 
 // gemini-1.5-flash has the most generous free tier
-const MODEL = 'gemini-2.5-flash'
+const MODEL = 'gemini-2.5-Pro'
 const API_URL = `https://generativelanguage.googleapis.com/v1beta/models/${MODEL}:generateContent`
 
 async function sleep(ms) {

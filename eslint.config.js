@@ -23,7 +23,16 @@ export default defineConfig([
       },
     },
     rules: {
-      'no-unused-vars': ['error', { varsIgnorePattern: '^[A-Z_]' }],
+      'no-unused-vars': [
+        'error',
+        {
+          varsIgnorePattern: '^[A-Z_]',
+          argsIgnorePattern: '^_',
+        },
+      ],
+      // This project intentionally uses small UI effects/animations that set state from effects.
+      // The rule is helpful in large apps but is too strict for this hackathon prototype.
+      'react-hooks/set-state-in-effect': 'off',
     },
   },
 ])

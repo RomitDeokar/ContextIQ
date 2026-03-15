@@ -5,11 +5,18 @@ export default function SemanticResolutionTrace({ trace, department }) {
   const [animatedScore, setAnimatedScore] = useState(0)
 
   useEffect(() => {
-    if (!trace) { setAnimatedScore(0); return }
+    if (!trace) {
+      setAnimatedScore(0)
+      return
+    }
+
     const target = trace.score
     const duration = 600
-    const start = animatedScore
+    const start = 0
     const startTime = Date.now()
+
+    // Reset immediately so the ring animation is consistent per query
+    setAnimatedScore(0)
 
     const animate = () => {
       const elapsed = Date.now() - startTime
@@ -18,8 +25,9 @@ export default function SemanticResolutionTrace({ trace, department }) {
       setAnimatedScore(Math.round(start + (target - start) * eased))
       if (progress < 1) requestAnimationFrame(animate)
     }
+
     requestAnimationFrame(animate)
-  }, [trace?.score])
+  }, [trace])
 
   if (!trace) {
     return (

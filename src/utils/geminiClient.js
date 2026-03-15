@@ -1,11 +1,8 @@
 const GEMINI_API_KEY = import.meta.env.VITE_GEMINI_API_KEY || ''
 
-// Keep model configurable for hackathon + deployment stability.
-// Default chosen for broad availability on free tier.
-const MODEL = import.meta.env.VITE_GEMINI_MODEL || 'gemini-2.5-flash'
+// gemini-1.5-flash has the most generous free tier
+const MODEL = 'gemini-2.5-flash'
 const API_URL = `https://generativelanguage.googleapis.com/v1beta/models/${MODEL}:generateContent`
-
-const DEBUG = import.meta.env.DEV
 
 async function sleep(ms) {
   return new Promise(resolve => setTimeout(resolve, ms))
@@ -39,7 +36,7 @@ export async function callGemini(systemPrompt, userMessage, retries = 3) {
 
   for (let attempt = 1; attempt <= retries; attempt++) {
     try {
-      if (DEBUG) console.log(`Gemini call attempt ${attempt}...`)
+      console.log(`Gemini call attempt ${attempt}...`)
 
       const response = await fetch(`${API_URL}?key=${GEMINI_API_KEY}`, {
         method: 'POST',
@@ -50,10 +47,8 @@ export async function callGemini(systemPrompt, userMessage, retries = 3) {
       const data = await response.json()
 
       // Log full response for debugging
-      if (DEBUG) {
-        console.log('Gemini response status:', response.status)
-        console.log('Gemini response data:', JSON.stringify(data, null, 2))
-      }
+      console.log('Gemini response status:', response.status)
+      console.log('Gemini response data:', JSON.stringify(data, null, 2))
 
       if (response.status === 429) {
         const waitMs = attempt * 5000

@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useState, createElement } from 'react'
 import { Shield, Zap, Globe, BookOpen, PanelRightOpen, PanelRightClose, Activity } from 'lucide-react'
 import DepartmentSelector from './components/DepartmentSelector'
 import ChatWindow from './components/ChatWindow'
@@ -207,7 +207,7 @@ export default function App() {
 function StatusPill({ icon: Icon, label, color }) {
   return (
     <div className="flex items-center gap-1.5">
-      <Icon size={10} className={color} />
+      {createElement(Icon, { size: 10, className: color })}
       <span className="text-[10px] text-gray-400 font-medium">{label}</span>
     </div>
   )

@@ -1,17 +1,34 @@
-import { useState, useCallback, useRef } from 'react'
-import { scoreQuery, resolveTermForDept, getTermMeanings } from '../utils/semanticFirewallEngine'
+import { useState, useCallback, useRef, useEffect } from 'react'
+import { scoreQuery, resolveTermForDept } from '../utils/semanticFirewallEngine'
 import { callGemini } from '../utils/geminiClient'
 import { buildSystemPrompt, buildQueryPrompt } from '../utils/promptTemplates'
 
 export function useChat() {
   const [messages, setMessages] = useState([])
   const [isLoading, setIsLoading] = useState(false)
-  const [sessionMemory, setSessionMemory] = useState({})
+  const [sessionMemory, setSessionMemory] = useState(() => {
+    if (typeof window === 'undefined') return {}
+    try {
+      return JSON.parse(localStorage.getItem('contextiq_session_memory') || '{}') || {}
+    } catch {
+      return {}
+    }
+  })
   const [decisions, setDecisions] = useState([])
   const [currentTrace, setCurrentTrace] = useState(null)
   const [pendingClarification, setPendingClarification] = useState(null)
   const pendingQueryRef = useRef(null)
   const sessionMemoryRef = useRef({})
+
+  // Persist session memory (auditability + live learning across reloads)
+  useEffect(() => {
+    if (typeof window === 'undefined') return
+    try {
+      localStorage.setItem('contextiq_session_memory', JSON.stringify(sessionMemory))
+    } catch {
+      // ignore storage errors
+    }
+  }, [sessionMemory])
 
   // Keep ref in sync with state
   const updateSessionMemory = (updater) => {

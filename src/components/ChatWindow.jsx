@@ -22,18 +22,11 @@ export default function ChatWindow({
   const bottomRef = useRef(null)
   const inputRef = useRef(null)
   const { liveScore, analyzeLive } = useAmbiguity()
-  const [lastTraceId, setLastTraceId] = useState(null)
 
   useEffect(() => {
     bottomRef.current?.scrollIntoView({ behavior: 'smooth' })
   }, [messages, pendingClarification, isLoading])
 
-  // Track which trace is "current" so we only show processing steps for the latest query
-  useEffect(() => {
-    if (currentTrace) {
-      setLastTraceId(Date.now())
-    }
-  }, [currentTrace])
 
   const handleSubmit = (e) => {
     e.preventDefault()
